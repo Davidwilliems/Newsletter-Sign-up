@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background-color: hsl(235, 18%, 26%);
+    height: 100vh;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+form{
+    background-color: white;
+    width: 40.625rem;
+    height: 25rem;
+    display: flex;
+    gap: 3.125rem;
+    padding: 1.25rem;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    color: hsl(235, 18%, 26%);
+    font-weight: 400;
+    font-size: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    margin: 0.5rem 0;
+}
+h1{
+    font-size: 2.58rem;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+}
+li{ 
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+label{
+    font-size: 8px;
+    font-weight: 700;
+    padding-bottom: 0;
+}
+input{
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    border: none;
+    transition: all ease 0.4s;
+}
+input[type=email]{
+    border: solid 1px hsl(231, 7%, 60%);
+}
+input[type=submit]{
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: hsl(4, 100%, 67%);
+}
+.mobile-img{
+    display: none;
+}
+.desktop-img{
+    height: 100%;
+}
+@media(max-width: 430px){
+    .desktop-img{
+        display: none;
+    }
+    .mobile-img{
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    form{
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+        gap: 5px;
+    }
+    .form-content{
+        width: 90%;
+        font-weight: 400;
+        font-size: 0.75rem;
+        justify-content: end;
+    }
+    label{
+        font-size: 12px;
+    }
+    input{
+        padding: 15px;
+    }
+}
