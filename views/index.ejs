@@ -1,5 +1,45 @@
 <%- include('partials/header.ejs') %>
-
 <body>
-
+    
+        <% if (locals.email) { %>
+            <div class="thankYou">
+                <div class="thankYou-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                        <defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/>
+                        </linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/>
+                        <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/>
+                        </g>
+                    </svg>
+                    <h1>Thanks for subscribing!</h1>
+                    <p>A confirmation message has been sent to <b><%= email %></b>. Please open it and click the button inside to confirm your subscription</p>
+                </div>
+                <div class="thankYou-button">
+                   <button href="/">Dismiss message</button>
+                </div>
+            </div >
+             <% } else { %>
+                <div class="card">
+                    <div class="card-content">
+                    <h1>Stay updated!</h1>
+                    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check" style="color: #FF6155;"></i>Product discovery and building what matters</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: #FF6155;"></i>Measuring to ensure updates are a success</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: #FF6155;"></i>And much more!</li>
+                    </ul>
+                    <form action="/submit" method="post">
+                        <label for="email">Email address</label>
+                        <input type="email" name="email" id="" placeholder="email@company.com" required>
+                        <button type="submit">Subscrice to monthly newsletter</button>
+                    </form>
+                    </div>
+                    <div class="card-img">
+                        <img class="desk-img" src="/assets/images/illustration-sign-up-desktop.svg" alt="">
+                        <img class="mob-img" src="/assets/images/illustration-sign-up-mobile.svg" alt="">
+                    </div>
+                </div>
+        <% } %>
+    
+    
 <%- include('partials/footer.ejs') %>
