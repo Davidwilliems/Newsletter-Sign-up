@@ -4,6 +4,7 @@
     box-sizing: border-box;
     list-style: none;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
 body{
     height: 100vh;
@@ -15,6 +16,9 @@ body{
 h1{
     font-weight: 700;
     color: hsl(234, 29%, 20%);
+}
+a{
+    color: white;
 }
 .card{
     background-color: white;
@@ -89,15 +93,15 @@ button[type=submit]:hover{
 }
 .thankYou{
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 20px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .thankYou-card{
     margin: auto;
+    height: 80%;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -106,11 +110,19 @@ button[type=submit]:hover{
 .thankYou-button button{
     background-color: hsl(234, 29%, 20%);
     color: white;
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+.thankYou-button button:hover{
+    background-color: hsl(4, 100%, 67%);
 }
 .thankYou-button{
     display: flex;
     flex-direction: column;
     justify-content: end;
+    margin-top: 20px;
 }
 @media(max-width : 576px){
     .mob-img{
@@ -139,11 +151,14 @@ button[type=submit]:hover{
         background-color: white;
         align-items: start;
     }
+    .thankYou{
+        height: 100%;
+        padding: 20px;
+    }
     .thankYou-card{
         display: flex;
         flex-direction: column;
-        margin: 20px;
-        justify-content: space-between;
+        justify-content: start;
     }
 }
 @media (max-width: 167px) {

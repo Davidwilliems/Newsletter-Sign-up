@@ -15,7 +15,7 @@
                     <p>A confirmation message has been sent to <b><%= email %></b>. Please open it and click the button inside to confirm your subscription</p>
                 </div>
                 <div class="thankYou-button">
-                   <button href="/">Dismiss message</button>
+                   <button><a href="/">Dismiss message</a></button>
                 </div>
             </div >
              <% } else { %>
@@ -40,6 +40,19 @@
                     </div>
                 </div>
         <% } %>
-    
+
+        <!-- Sign-up form end -->
+
+        <!-- Success message start -->
+
+        <!-- Thanks for subscribing!
+
+        A confirmation email has been sent to ash@loremcompany.com. 
+        Please open it and click the button inside to confirm your subscription.
+
+        Dismiss message -->
+
+        <!-- Success message end -->
+            
     
 <%- include('partials/footer.ejs') %>
